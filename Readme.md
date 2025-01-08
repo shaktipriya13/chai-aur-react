@@ -8,13 +8,11 @@ If you want to build mobile apps using React Native along with react, you'll nee
 
 **Three.js** is a JavaScript library used to create and display **3D graphics** in a web browser.
 
-
 follow below codes while setting a new fldr
 
 echo : used to create a new file
 
 ![1736339234776](image/Readme/1736339234776.png)
-
 
 **`npm`** (Node Package Manager) is used to install, update, or manage Node.js packages globally or locally, while **`npx`(node package executor)** is a tool to execute Node.js packages directly without globally installing them. For instance, you can run a package temporarily with `npx` without cluttering your system, making it ideal for tools like `create-react-app`. In short, `npm` manages packages, and `npx` runs them on-demand.
 
@@ -24,16 +22,13 @@ below method is slower to create app
 
 `create-react-app` is a software or utility but it is very bulky software so not preffered to use, so instead we use **vite and parcel**,they are also utilities like `create-react-app`
 
-
-## package.json 
+## package.json
 
 it is the entry point to understand any react app structure
 
 ![1736339872579](image/Readme/1736339872579.png)
 
 web vitals track the speed of perfomnce of react apps
-
-* 
 
 The script in the context of a React project refers to the **commands** defined in the `package.json` file under the "scripts" section. These scripts are used to run specific tasks like starting the development server, building the project for production, running tests, or ejecting configurations.
 
@@ -74,16 +69,12 @@ vite,swelt are just another bundler that creates react app
 
 ![1736341122074](image/Readme/1736341122074.png)
 
-
 ---
-
-
 
 ![1736341255847](image/Readme/1736341255847.png)**Dev dependencies** are packages or libraries that are required only during the development process and are  **not included in the final production build** . These dependencies help with tasks like testing, bundling, transpiling, and code linting during development but are not needed for the application to run in production.
 
 * node modules are not given with vite.so we need to install thm using npm i
 * ![1736341436363](image/Readme/1736341436363.png)
-
 
 ![1736341591646](image/Readme/1736341591646.png)
 
@@ -97,10 +88,17 @@ in every react and vite app we are given Readme.md .do update it accordingly
 
 ---
 
+![1736343122831](image/Readme/1736343122831.png)
 
+---
 
-![1736341973407](image/Readme/1736341973407.png)
+![1736343129811](image/Readme/1736343129811.png)
 
 only above shown files in src must be kept and delete the rest
 
 jsx is html with js
+
+#### Cleaning the code is VIMP✨
+
+
+when u  make new react or vite app, jo bhi kam ke above files ha unme jo bhi likha ha ,usme jo bhi tumko samajh nhi aa rha sabko remove krdo to make a simple file
