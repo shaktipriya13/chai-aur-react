@@ -1,10 +1,14 @@
+ctrl+b //to hide sidebasr
+
+ctrl+c to quit terminal
+
 React is a library and not framework. frameworks hav very strict rules and syntaxes but react is cool guy
 
 vite and parcel ek bundler jo bhut sare js files ko combine krke basic aapko 1 file de deta ha
 
 If you want to build mobile apps using React Native along with react, you'll need to learn both React and React Native, but focus more on React Native.
 
- If your goal is web development, use React with react-dom lobraray
+ If your goal is web development, use React with react-dom libraray
 
 **Three.js** is a JavaScript library used to create and display **3D graphics** in a web browser.
 
@@ -100,5 +104,76 @@ jsx is html with js
 
 #### Cleaning the code is VIMP✨
 
-
 when u  make new react or vite app, jo bhi kam ke above files ha unme jo bhi likha ha ,usme jo bhi tumko samajh nhi aa rha sabko remove krdo to make a simple file
+
+---
+
+# Video 3
+
+understanding structure of flder:
+
+build is completely ignored
+
+package.lock.json : means packagees get locked.ie. all the given dependencies will run in the given versions only.inme koi stable version ko lock kr diya jata ha
+
+public fldr ke manifest.json files are used for mobile when apps are opened in them
+
+robots.txt is for refernce for search engines
+
+# explantion of index.js file in 01basicsreact App
+
+![1736362308044](image/Readme/1736362308044.png)
+
+React is SPA single page applictin since we have only 1 index.html file to be loaded
+
+we can change name of index.js file to shakti.js also
+
+in index.js we importe 2 libarires react and react-dom as only they both are used to manipualte the dom of web
+
+react-dom is an implemtation of react specifically for web
+
+react khud ka webpage ke lie apna dom banata ha called as React.DOM
+
+###### jo bhi script files ha wo pacakge.json ke react-scripts se html file se automatically attach ho jati ha
+
+The `index.html` file has a `<div>` with an `id` (usually `root`). React injects the entire app into this `<div>`.
+
+If you open your browser's **Page Source** (by right-clicking and selecting "View Page Source"), you’ll notice:* A `<script>` tag that references JavaScript bundles (e.g., `static/js/main.bundle.js`).These bundles are automatically added by CRA during the build process.
+
+React's dynamic behavior is what makes the page interactive. The static `index.html` file acts as the skeleton, while React scripts (bundled JavaScript) dynamically populate the content in the `<div id="root">` and other parts of the DOM.
+
+* **App.js ---> data/fxns are fetched ---> index.js ----> exports to  root div of -----> index.html**
+
+# explantion of index.js file in 01ViteApp
+
+jsx and js files are same only...bas components ko alag se mention ke lie jsx files are used
+
+vite and create react app ka flder structure me lagbhag same hi kam hota ha bas vite thora lite weight ha
+
+vite se appliction banane wakt componnts hv to be kept in .jsx file bcoz vite has its own rules. nbut in case of create react app(CRA) we can name it as both .js or .jsx
+
+![1736364324567](image/Readme/1736364324567.png)
+
+keep the name of componnts start with capital. these are best practices. file ki names upper ya lower case me ho skti ha
+
+component.jsx-----> App.jsx ----> main.jsx -----> index.html
+
+//the index.html has main.jsx script file attached to it
+
+##### jsx files hav rule that they can return only 1 elmnt..could do like shown below:
+
+![1736364743525](image/Readme/1736364743525.png)
+
+![1736364767944](image/Readme/1736364767944.png)
+
+<></> called a fragment
+
+### notes:
+
+1. the fxns that we are exporting in either .js or .jsx files are called as components
+2. the name of these componnt fxns should start with capital in both CRA and vite...even capitalize first letter of file name of compnnts also
+3. ![1736365288548](image/Readme/1736365288548.png)
+4. above can be used to reload window
+5. some libraries like vite will force to keep file names as .jsx if they return html --> u can also follow this basic convention for CRA
+6. react apna ek virtual dom banata ha parallel to the browser's dom
+7. we hv only 1 index.html so react is called SPA
