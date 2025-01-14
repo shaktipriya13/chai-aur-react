@@ -4,6 +4,8 @@ ctrl+c to quit terminal
 
 React is a library and not framework. frameworks hav very strict rules and syntaxes but react is cool guy
 
+//1st video down comments 
+
 vite and parcel ek bundler jo bhut sare js files ko combine krke basic aapko 1 file de deta ha
 
 If you want to build mobile apps using React Native along with react, you'll need to learn both React and React Native, but focus more on React Native.
@@ -12,7 +14,7 @@ If you want to build mobile apps using React Native along with react, you'll nee
 
 **Three.js** is a JavaScript library used to create and display **3D graphics** in a web browser.
 
-follow below codes while setting a new fldr
+follow below codes while setting a new fldr and to sync with github.
 
 echo : used to create a new file
 
@@ -82,13 +84,19 @@ vite,swelt are just another bundler that creates react app
 
 ![1736341591646](image/Readme/1736341591646.png)
 
+
+When you run:
+
+* `npm start`: The app runs in  **development mode** . 
+* `npm run build`: This creates a **production-ready** build in the `build` folder, optimized for deployment.
+
 ***More dependencies** mean more code needs to be bundled and served to the browser. Larger bundle sizes can lead to slower initial page load times as the browser has to download and parse more files.*
 
 To run app:
 
 ![1736341739187](image/Readme/1736341739187.png)
 
-in every react and vite app we are given Readme.md .do update it accordingly
+in every react and vite app(project) we are given Readme.md .do update it accordingly
 
 ---
 
@@ -104,7 +112,7 @@ jsx is html with js
 
 #### Cleaning the code is VIMP✨
 
-when u  make new react or vite app, jo bhi kam ke above files ha unme jo bhi likha ha ,usme jo bhi tumko samajh nhi aa rha sabko remove krdo to make a simple file
+when u  make new react or vite app, jo bhi kam ke above files ha unme jo bhi likha ha ,usme jo bhi tumko samajh nhi aa rha like commmnets ,svg files etc .sabko remove krdo to make a simple file
 
 ---
 
@@ -134,7 +142,7 @@ react-dom is an implemtation of react specifically for web
 
 react khud ka webpage ke lie apna dom banata ha called as React.DOM
 
-###### jo bhi script files ha wo pacakge.json ke react-scripts se html file se automatically attach ho jati ha
+###### jo bhi script files ha wo pacakge.json ke react-scripts se html file se automatically attach ho jati ha in create-react app
 
 The `index.html` file has a `<div>` with an `id` (usually `root`). React injects the entire app into this `<div>`.
 
@@ -142,15 +150,20 @@ If you open your browser's **Page Source** (by right-clicking and selecting "Vie
 
 React's dynamic behavior is what makes the page interactive. The static `index.html` file acts as the skeleton, while React scripts (bundled JavaScript) dynamically populate the content in the `<div id="root">` and other parts of the DOM.
 
-* **App.js ---> data/fxns are fetched ---> index.js ----> exports to  root div of -----> index.html**
+* **componens exported to --> App.js ---> data/fxns are fetched & given to  ---> index.js ----> exports to  root div of -----> index.html**
+* ---
+* ![1736403172564](image/Readme/1736403172564.png)
+* here " react -scripts : 5.01" is responsible for rendering .js files to the browser
 
 # explantion of index.js file in 01ViteApp
 
 jsx and js files are same only...bas components ko alag se mention ke lie jsx files are used
 
-vite and create react app ka flder structure me lagbhag same hi kam hota ha bas vite thora lite weight ha
+main.jsx is the js script file attached to html
 
-vite se appliction banane wakt componnts hv to be kept in .jsx file bcoz vite has its own rules. nbut in case of create react app(CRA) we can name it as both .js or .jsx
+vite and create react app ka flder structure me lagbhag same hi kam hota ha bas vite thora lite weight ha bcoz it has less dependencies
+
+vite se appliction banane wakt componnts hv to be kept in .jsx file bcoz vite has its own rules. but in case of create react app(CRA) we can name it as both .js or .jsx
 
 ![1736364324567](image/Readme/1736364324567.png)
 
@@ -177,3 +190,42 @@ component.jsx-----> App.jsx ----> main.jsx -----> index.html
 5. some libraries like vite will force to keep file names as .jsx if they return html --> u can also follow this basic convention for CRA
 6. react apna ek virtual dom banata ha parallel to the browser's dom
 7. we hv only 1 index.html so react is called SPA
+
+---
+
+# Video 4
+
+here we are going to make our own custom react app
+
+React uses a concept called the Virtual DOM to efficiently manage and update the UI. Here's an explanation of how React creates and manages a tree structure based on your components and elements:
+
+### React Element Tree
+
+When you define a React component or an element, React internally creates an object representation of the DOM elements, known as the Virtual DOM. This virtual representation helps React to efficiently update the actual DOM by comparing changes and only updating what’s necessary.
+
+### Structure of React Elements
+
+Each React element is an object that contains:
+
+1. **Type** : This property defines what kind of element it is, such as `'div'`, `'p'`, `'h1'`, or even a custom component. For example, in your `App.js`:
+   ![1736407583691](image/Readme/1736407583691.png)
+2. ![1736407644052](image/Readme/1736407644052.png)
+3. 
+
+### Creating the Virtual DOM
+
+React creates a tree of these elements. For your example in `App.js`, the Virtual DOM structure would look something like this (simplified):
+
+![1736407684703](image/Readme/1736407684703.png)
+
+### Updating the DOM
+
+When you change something in your React components, React updates the Virtual DOM and then compares it with the previous version. This process is known as "reconciliation." React then determines the minimal set of changes required to update the real DOM efficiently.
+
+### Summary
+
+* **Type** : Defines what the element is (`div`, `h1`, `p`, `a`, etc.).
+* **Props** : An object containing attributes and properties (`href`, `target`, etc.).
+* **Children** : Content inside the element (text, other elements, etc.).
+
+This structure allows React to optimize updates and make your application more efficient and easier to manage.
